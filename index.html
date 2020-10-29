@@ -17,38 +17,41 @@
 
 </head>
 <body>
+<!-- nav -->
+  <nav role="navigation" class="nav">
+    <div class="nav__wrap">
+      <h1 class="logo">
+        <a href="index.html" class="logo__link"><img src="images/logo_black.svg" alt="slou logo"></a>
+      </h1>
+      <span class="mobile-nav pc--hidden">
+        <a href="#" class="mobile-nav__link">
+          <img src="images/menu-icon.svg" alt="mobile navigation" class="mobile-nav__img">
+        </a>
+      </span>
+      <ul class="nav__list mobile--hidden">
+        <li class="nav__item"><a href="aboutUs.html" class="nav__link">About Us</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Reviews</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Notice</a></li>
+      </ul>
+      <ul class="member-nav mobile--hidden">
+        <li class="member-nav__item"><a href="#" class="member-nav__link">로그인</a></li>
+        <li class="member-nav__item"><a href="#" class="member-nav__link">회원가입</a></li>
+        <li class="member-nav__item"><a href="#" class="member-nav__link">주문/배송</a></li>
+        <li class="member-nav__item"><a href="#" class="member-nav__link">쇼룸</a></li>
+        <li class="member-nav__item"><a href="#" class="member-nav__link">정품인증</a></li>
+        <li class="member-nav__item member-nav__item--global"><a href="#" class="member-nav__link">Global</a></li>
+      </ul>
+    </div>
+  </nav>
+<!-- // nav -->
+
 <!-- header -->
   <header class="header">
     <a href="https://www.youtube.com/watch?v=zivAEFgfa8k" target="_blank" class="header__img-link">  
       <img src="images/main/header.jpg" alt="당신과 좋은 잠 사이" class="header__img">
     </a>
-    <nav role="navigation" class="nav">
-      <div class="nav__wrap">
-        <h1 class="logo">
-          <a href="#" class="logo__link"><img src="images/logo_black.svg" alt="slou logo"></a>
-        </h1>
-        <span class="mobile-nav pc--hidden">
-          <a href="#" class="mobile-nav__link">
-            <img src="images/menu-icon.svg" alt="mobile navigation" class="mobile-nav__img">
-          </a>
-        </span>
-        <ul class="nav__list mobile--hidden">
-          <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Reviews</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Notice</a></li>
-        </ul>
-        <ul class="member-nav mobile--hidden">
-          <li class="member-nav__item"><a href="#" class="member-nav__link">로그인</a></li>
-          <li class="member-nav__item"><a href="#" class="member-nav__link">회원가입</a></li>
-          <li class="member-nav__item"><a href="#" class="member-nav__link">주문/배송</a></li>
-          <li class="member-nav__item"><a href="#" class="member-nav__link">쇼룸</a></li>
-          <li class="member-nav__item"><a href="#" class="member-nav__link">정품인증</a></li>
-          <li class="member-nav__item member-nav__item--global"><a href="#" class="member-nav__link">Global</a></li>
-        </ul>
-      </div>
-    </nav>
 
     <!-- slider control -->
     <ul class="header__slider slider">
@@ -138,8 +141,8 @@
     <div class="products__wrap">
       <h2 class="products__title">PRODUCTS</h2>
       <a href="#" class="products__link">
-        <article class="products__product">
-          <img src="images/main/product_mat.jpg" alt="mattresses" class="products__img products__img--resize">
+        <article class="products__product products__product--resize">
+          <img src="images/main/product_mat.jpg" alt="mattresses" class="products__img">
         </article>
       </a>
       <a href="#" class="products__link">
@@ -149,12 +152,12 @@
       </a>
       <a href="#" class="products__link">
         <article class="products__product">
-          <img src="images/main/product_duvet.jpg" alt="duvet" class="products__img">
+          <img src="images/main/product_body-pillow.jpg" alt="body pillow" class="products__img">
         </article>
       </a>
       <a href="#" class="products__link">
-        <article class="products__product">
-          <img src="images/main/product_frame.jpg" alt="frame" class="products__img products__img--resize">
+        <article class="products__product products__product--resize">
+          <img src="images/main/product_frame.jpg" alt="frame" class="products__img">
         </article>
       </a>
     </div>
@@ -200,12 +203,6 @@
       <li class="lab__slider__dot slider__dot">
         <button class="lab__slider__btn slider__btn"></button>
       </li>
-      <li class="lab__slider__dot slider__dot">
-        <button class="lab__slider__btn slider__btn"></button>
-      </li>
-      <li class="lab__slider__dot slider__dot">
-        <button class="lab__slider__btn slider__btn"></button>
-      </li>
     </ul>
   <!-- // slider control -->
   </section>
@@ -238,24 +235,26 @@
 <!-- footer -->
   <footer class="footer">
     <div class="footer__wrap">
-      <article class="inquiry">
-        <h3 class="inquiry__title">고객센터</h3>
-        <ul class="inquiry__list">
-          <li class="inquiry__item">1899-8588</li>
-          <li class="inquiry__item">카카오톡 플러스 친구</li>
-          <li class="inquiry__item inquiry__item--imformation">제품문의 · 쇼룸안내 · A/S · 분해설치</li>
-          <li class="inquiry__item inquiry__item--imformation">평일 09:30 - 17:30 | 점심시간 12:30 - 13:30</li>
-        </ul>
-      </article>
-      <article class="inquiry">
-        <h3 class="inquiry__title">기업고객 문의</h3>
-        <ul class="inquiry__list">
-          <li class="inquiry__item">goodnight@slou.co.kr</li>
-          <li class="inquiry__item inquiry__item--imformation">대량구매 및 마케팅 제휴</li>
-          <li class="inquiry__item inquiry__item--imformation">평일 10:30 - 17:30 | 점심시간 12:30 - 13:30</li>
-        </ul>
-      </article>
-      <ul class="social-navigation">
+      <div class="inquiry__wrap">
+        <article class="inquiry">
+          <h3 class="inquiry__title">고객센터</h3>
+          <ul class="inquiry__list">
+            <li class="inquiry__item">1899-8588</li>
+            <li class="inquiry__item">카카오톡 플러스 친구</li>
+            <li class="inquiry__item inquiry__item--imformation">제품문의 · 쇼룸안내 · A/S · 분해설치</li>
+            <li class="inquiry__item inquiry__item--imformation">평일 09:30 - 17:30 | 점심시간 12:30 - 13:30</li>
+          </ul>
+        </article>
+        <article class="inquiry">
+          <h3 class="inquiry__title">기업고객 문의</h3>
+          <ul class="inquiry__list">
+            <li class="inquiry__item">goodnight@slou.co.kr</li>
+            <li class="inquiry__item inquiry__item--imformation">대량구매 및 마케팅 제휴</li>
+            <li class="inquiry__item inquiry__item--imformation">평일 10:30 - 17:30 | 점심시간 12:30 - 13:30</li>
+          </ul>
+        </article>
+      </div>
+      <ul class="social-navigation pc--hidden">
         <li class="social-navigation__item">
           <a href="#" class="social-navigation__link"><img src="images/sns-instagram.png" alt="instagram" class="social-navigation__img"></a>
         </li>
@@ -269,23 +268,26 @@
           <a href="#" class="social-navigation__link"><img src="images/sns-youtube.png" alt="youtube" class="social-navigation__img"></a>
         </li>
       </ul>
-      <ul class="util">
-        <li class="util__item">
-          <a href="#" class="util__link">홈</a>
-        </li>
-        <li class="util__item">
-          <a href="#" class="util__link">About Us</a>
-        </li>
-        <li class="util__item">
-          <a href="#" class="util__link">이용약관</a>
-        </li>
-        <li class="util__item">
-          <a href="#" class="util__link">개인정보처리방침</a>
-        </li>
-        <li class="util__item">
-          <a href="#" class="util__link">A/S</a>
-        </li>
-      </ul>
+      <div class="util__wrap">
+        <h3 class="inquiry__title mobile--hidden">Quick Menu</h3>
+        <ul class="util">
+          <li class="util__item">
+            <a href="#" class="util__link">홈</a>
+          </li>
+          <li class="util__item">
+            <a href="#" class="util__link">About Us</a>
+          </li>
+          <li class="util__item">
+            <a href="#" class="util__link">이용약관</a>
+          </li>
+          <li class="util__item">
+            <a href="#" class="util__link">개인정보처리방침</a>
+          </li>
+          <li class="util__item">
+            <a href="#" class="util__link">A/S</a>
+          </li>
+        </ul>
+      </div>
       <article class="info">
         <ul class="info__list">
           <li class="info__item">
@@ -299,16 +301,39 @@
           </li>    
           <li class="info__item">
             <p>개인정보보호 및 청소년보호 책임자 · 강성문</p>
-            <p>호스팅 서비스사업자 ·(주)일룸</p>
+            <p>호스팅 서비스사업자 · (주)일룸</p>
           </li>
         </ul>
-        <p class="info__copyright">Copyright (c) 2019 iloom Inc. All rights reserved</p>
+        <p class="info__copyright pc--hidden">
+          Copyright (c) 2019 iloom Inc. All rights reserved
+        </p>
         <button class="info__button">사업자정보 확인</button>
         <button class="info__button">Fiserv 에스크로 가입사실 확인</button>
       </article>
     </div>
-    <article class="fursys-logo">
+    <article class="fursys-logo pc--hidden">
       <img src="images/fursys-group_logo.png" alt="fursys logo" class="fursys-logo__img">
+    </article>
+    <article class="copyright mobile--hidden">
+      <div class="copyright__wrap">
+        <p class="copyright__copy">
+          Copyright (c) 2020 iloom Inc. All rights reserved
+        </p>
+        <ul class="social-navigation mobile--hidden">
+          <li class="social-navigation__item">
+            <a href="#" class="social-navigation__link"><img src="images/sns-instagram.png" alt="instagram" class="social-navigation__img"></a>
+          </li>
+          <li class="social-navigation__item">
+            <a href="#" class="social-navigation__link"><img src="images/sns-facebook.png" alt="facebook" class="social-navigation__img"></a>
+          </li>
+          <li class="social-navigation__item">
+            <a href="#" class="social-navigation__link"><img src="images/sns-blog.png" alt="blog" class="social-navigation__img"></a>
+          </li>
+          <li class="social-navigation__item">
+            <a href="#" class="social-navigation__link"><img src="images/sns-youtube.png" alt="youtube" class="social-navigation__img"></a>
+          </li>
+        </ul>
+     </div>
     </article>
   </footer>
 <!-- //footer -->
