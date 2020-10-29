@@ -1,0 +1,280 @@
+@charset "utf-8";
+@import url("common.less");
+
+// contents
+.brand-story {
+  
+  &__wrap {
+    margin: 44px 0;
+  }
+
+  &__story {
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+    border-bottom: solid 2px #EEEFF0; 
+    box-sizing: border-box;
+  
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__img {
+    width: 35%;
+    margin-left: 4%;
+  }
+  
+  &__text-box {
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.new-product {
+  background: #f5f5f5;
+  background: linear-gradient(180deg, #e9dfd6 25%, #f5f5f5 25%);
+  
+
+  &__wrap {
+    width: 77.5%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__img-box {
+    padding: 80px 0;
+  }
+
+  &__text-box {
+    font-size: 14px;
+  }
+
+  &__title::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 31px;
+    background: url(../images/main/newproduct_textnew.png) no-repeat;
+    background-size: contain;
+  }
+
+  &__title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 48px;
+    background-color: transparent;
+    border: solid 2px #1b1d1f;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px #30303033;
+    margin-bottom: 70px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #e9dfd6;
+      box-shadow: none;
+    }
+  }
+
+  &__slider {
+    bottom: 25px;
+  }
+
+  &__slider__btn {
+    background-color: #000;
+  }
+}
+
+.products {
+  background-color: #f2ece7;
+  padding-bottom: 60px;
+
+  &__wrap {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  &__product {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    .center-alignment;
+    margin-bottom: 13px;
+  
+    &::after {
+      content: '';
+      display: block;
+      background-color: rgba(255, 255, 255, 0.6);
+      width: 100%;
+      height: 17%;
+      position: absolute;
+      bottom: 0; 
+      .center-alignment;
+      font: bold 22px 'NanumSquare';
+    }
+  }
+  
+  &__link {
+    &:nth-of-type(1) article::after { content: '매트리스';}
+    &:nth-of-type(2) article::after { content: '베개';}
+    &:nth-of-type(3) article::after { content: '구스다운 이불';}
+    &:nth-of-type(4) article::after { content: '프레임';}
+  }
+
+  &__img--resize {
+    width: 200%; height: 100%;
+  }
+}
+
+.lab {
+  background-color: #f6f6f6;
+  padding-bottom: 92px;
+  position: relative;
+
+  &__wrap {
+    width: 84.375%;
+    margin: 0 auto;
+  }
+
+  &__text-box {
+    background-color: #fff;
+    height: 97px;
+    padding: 24px;
+    .center-alignment;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__article-title {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  &__article-text {
+    font-size: 12px;
+  }
+
+
+  &__slider {
+    bottom: 55px;
+
+    &__btn {
+      background-color: #000;
+    }
+  }  
+}
+
+.subsidiary {
+  padding-bottom: 48px;
+
+  &__wrap {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px #eeeff0;
+  }
+
+  &__box {
+    border: solid 1px #eeeff0;
+    width: 50%;
+    box-sizing: border-box;
+    max-height: 112px;
+    .center-alignment
+  }
+
+  &__img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+// PC
+@media (min-width: 1000px) {
+  
+  // contents
+  .brand-story {
+
+    &__wrap {
+      margin: 100px auto;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1028px;
+    }
+
+    &__story {
+      width: 50%;
+      height: 204px;
+
+      &:nth-child(1) { border-right: solid 2px #EEEFF0; }
+      &:nth-child(3) {
+        border-bottom: 0; 
+        border-right: solid 2px #EEEFF0; 
+      }
+    }
+
+    &__img {
+      margin-left: 14px;
+    }
+
+    &__title {
+      font-size: 23px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  .new-product {
+    background: linear-gradient(90deg, #e9dfd6 40%, #f5f5f5 40%);
+
+    &__wrap {
+      width: 1000px;
+      display: flex;
+      justify-content: center;
+      padding: 150px 0;
+    }
+
+    &__img-box {
+      width: 40%;
+      .center-alignment;
+      margin-right: 54px;
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 60px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__btn {
+      width: 170px;
+      height: 56px;
+      margin: 0;
+    }
+  }
+}
