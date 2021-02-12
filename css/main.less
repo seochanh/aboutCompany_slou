@@ -1,6 +1,27 @@
 @charset "utf-8";
 @import url("common.less");
 
+// header
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img-link {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 250%;
+  }
+
+  &__slider-control {
+    bottom: 11px;
+  }
+}
+
 // contents
 .brand-story {
   
@@ -131,18 +152,22 @@
       bottom: 0; 
       .center-alignment;
       font: bold 22px 'NanumSquare';
+    } 
+
+    &--resize {
+
+      .products__img {
+        width: 200%;
+        height: 100%;
+      }
     }
   }
-  
+
   &__link {
     &:nth-of-type(1) article::after { content: '매트리스';}
     &:nth-of-type(2) article::after { content: '베개';}
-    &:nth-of-type(3) article::after { content: '구스다운 이불';}
+    &:nth-of-type(3) article::after { content: '바디필로우';}
     &:nth-of-type(4) article::after { content: '프레임';}
-  }
-
-  &__img--resize {
-    width: 200%; height: 100%;
   }
 }
 
@@ -163,15 +188,12 @@
     .center-alignment;
     flex-direction: column;
     align-items: flex-start;
+    font-size: 12px;
   }
 
   &__article-title {
     font-size: 17px;
     margin-bottom: 10px;
-  }
-
-  &__article-text {
-    font-size: 12px;
   }
 
 
@@ -211,7 +233,26 @@
 
 // PC
 @media (min-width: 1000px) {
-  
+  // header
+  .header {
+    overflow: hidden;
+
+    &__img-link {
+      position: relative;
+      top: 70px;
+      width: 100%;
+      max-height: 97vh;
+    }
+
+    &__img {
+      min-width: 1800px;
+    }
+
+    &__slider {
+      margin-bottom: 23px;
+    }
+  }
+
   // contents
   .brand-story {
 
@@ -247,9 +288,10 @@
   }
 
   .new-product {
-    background: linear-gradient(90deg, #e9dfd6 40%, #f5f5f5 40%);
+    background: linear-gradient(90deg, #e9dfd6 50%, #f5f5f5 50%);
 
     &__wrap {
+      background: linear-gradient(90deg, #e9dfd6 230px, #f5f5f5 230px);
       width: 1000px;
       display: flex;
       justify-content: center;
@@ -275,6 +317,103 @@
       width: 170px;
       height: 56px;
       margin: 0;
+    }
+  }
+
+  .products {
+    padding-bottom: 105px;
+
+    &__wrap {
+      width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__link {
+      width: auto;
+
+      &:nth-of-type(1) article::after { content: 'Mattresses';}
+      &:nth-of-type(2) article::after { content: 'Pillows';}
+      &:nth-of-type(3) article::after { content: 'Body Pillow';}
+      &:nth-of-type(4) article::after { content: 'Frames';}
+    }
+
+    &__product {
+      width: auto;
+      margin-bottom: 20px;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover::after {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100%;
+        color: #fff;
+        .center-alignment;
+        font-size: 32px;
+      }
+
+      &--resize {
+
+        .products__img {
+          width: auto;
+          height: 320px;
+        }
+      }
+    }
+
+    &__img {
+      height: 320px;
+      width: auto;
+    }
+  }
+
+  .lab {
+    padding-bottom: 190px;
+    overflow: hidden;
+
+    &__wrap {
+      width: 1860px;
+      display: flex;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__article {
+      width: 600px;
+    }
+
+    &__slider {
+      bottom: 90px;
+    }
+
+    &__text-box {
+      padding: 40px 48px;
+      font-size: 16px;
+    }
+
+    &__article-title {
+      font-size: 24px;
+    }
+  }
+
+  .subsidiary {
+    padding-bottom: 130px;
+
+    &__wrap {
+      width: 1000px;
+    }
+
+    &__box {
+      width: calc(100% / 3);
     }
   }
 }
